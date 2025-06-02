@@ -1,0 +1,33 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.content {
+  background-color: #fff;
+  width: 60vw;
+  height: auto;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description{
+  text-align: center;
+}
+.content_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
