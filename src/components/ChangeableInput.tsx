@@ -3,12 +3,12 @@ import { useDebouncedCallback } from "use-debounce";
 
 type Props = {
   value: string;
-  onChange: (v: string) => void;
+  onChange?: (v: string) => void;
 };
 
 function ChangeableInput({ value, onChange }: Props) {
   const debounced = useDebouncedCallback((value) => {
-    onChange(value);
+    onChange?.(value);
   }, 1000);
 
   return (

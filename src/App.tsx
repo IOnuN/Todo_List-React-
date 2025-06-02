@@ -5,16 +5,7 @@ import Item from "./components/Item";
 import ChangeableInput from "./components/ChangeableInput";
 
 function App() {
-  // const [title, setTitle] = useState("TODO list");
-  // const [description, setDescription] = useState("Description");
-  const [items, setItems] = useState([]);
-
-  // const handleChangeTitle = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setTitle(e.target.value);
-  // };
-  // const handleChangeDescription = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setDescription(e.target.value);
-  // };
+  const [items, setItems] = useState<{ title: string; id: number }[]>([]);
 
   const handelAddItem = (content: string) => {
     const newItem = {
@@ -24,19 +15,16 @@ function App() {
     setItems((items) => [...items, newItem]);
   };
 
-  const [title, setTitle] = useState("www");
-  const handleChangeTitle = (v: string) => {
-    setTitle(v);
-  };
-  console.log("title", title);
+  const title = "TODO List";
 
   return (
     <div className={"box"}>
       <div className={"content"}>
-        <ChangeableInput value={title} onChange={handleChangeTitle} />
+        <ChangeableInput value={title} />
+        <ChangeableInput value="description" />
         <div className={"content_items"}>
           {items.map((item) => (
-            <Item key={item.id} />
+            <Item key={item.id} text={`Note ${item.id + 1}`} checked={false} />
           ))}
         </div>
         <AddItem onClick={() => handelAddItem(title)} />
