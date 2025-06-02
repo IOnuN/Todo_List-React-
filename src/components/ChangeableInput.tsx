@@ -1,5 +1,4 @@
 import "../style/change.css";
-import { type ChangeEvent, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 type Props = {

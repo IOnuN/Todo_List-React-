@@ -1,5 +1,5 @@
 import "./App.css";
-import { type ChangeEvent, useEffect, useState } from "react";
+import { useState } from "react";
 import AddItem from "./components/AddItem";
 import Item from "./components/Item";
 import ChangeableInput from "./components/ChangeableInput";
